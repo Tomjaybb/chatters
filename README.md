@@ -85,3 +85,4 @@ Detector modules implement `Detector.detect(frame_bgr) -> list[dict]`. A future 
 ```bash
 pytest tracker/tests
 ```
+test
