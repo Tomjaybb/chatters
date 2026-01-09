@@ -1,0 +1,10 @@
+hsv_yellow:
+  lower: [20, 100, 100]
+  upper: [35, 255, 255]
+  morph_kernel: 5
+  min_area: 20
+background_subtraction:
+  history: 300
+  var_threshold: 16
+  detect_shadows: false
+  min_area: 20
