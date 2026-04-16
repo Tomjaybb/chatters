@@ -1,0 +1,33 @@
+[project]
+name = "chatters-pipeline"
+version = "0.1.0"
+description = "Instagram → Linktree → OnlyFans Creator Discovery Pipeline for Cleaner.io"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "instaloader>=4.10",
+    "loguru>=0.7",
+    "python-dotenv>=1.0",
+    "fake-useragent>=1.4",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+playwright = ["playwright>=1.40"]
+apify = ["apify-client>=1.6"]
+instagrapi = ["instagrapi>=2.0"]
+streamlit = ["streamlit>=1.30", "plotly>=5.18"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1"]
+
+[project.scripts]
+pipeline = "pipeline.main:cli"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["pipeline/tests"]
